@@ -31,12 +31,14 @@
 
     <script>
       /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
+      function navToggle() {
+        var x = document.getElementById("btn-nav");
+        if (x.className === "btn btn-nav") {
+          x.className += " btn-nav-active";
+          document.getElementById("navList").className = "showList";
         } else {
-          x.className = "topnav";
+          x.className = "btn btn-nav";
+          document.getElementById("navList").className = "";
         }
       }
     </script>
@@ -47,14 +49,16 @@
 
     <div class="topnav" id="myTopnav">
       <img class="logo" src="images/BJSS-280x150.png" width="90" height="50" />
+      <div class="btn btn-nav" id="btn-nav" onclick="navToggle()">
+        <div class="btn-nav-middle"></div>
+      </div>
+    </div>
+    <div id="navList">
       <ul>
-        <a href="index.html">Home Page</a>
-        <a href="MapOfVenue.html">Map of Venue</a>
-        <a href="Saturday.html">Saturday</a>
-        <a href="Sunday.html">Sunday</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="MapOfVenue.html">Map of Venue</a></li>
+        <li><a href="Saturday.html">Saturday</a></li>
+        <li><a href="Sunday.html">Sunday</a></li>
       </ul>
     </div>
 
