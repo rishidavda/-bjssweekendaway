@@ -760,3 +760,7 @@ there.
 .btn-nav-active.btn-nav::after {
   transform: translateY(-8px) rotate(-45deg);
 }
+
+.main {
+  padding: 15px;
+}
