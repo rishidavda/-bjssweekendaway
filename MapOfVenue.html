@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+      <script src='scripts/jquery-1.8.3.min.js'></script>
+      <script src='scripts/jquery.elevatezoom.js'></script>
+
     <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8" />
@@ -50,8 +54,24 @@
       </ul>
     </div>
     <h1 align="center">Map of Venue</h1>
-    <div class="container"></div>
-    <img class="MapOfVenue" src="images/Map.png" />
+
+    <div class="row">
+    
+        <div align="center" class="twelve.columns">
+          <img id="zoom_01" src='images/map_small.png' data-zoom-image="images/Map.png"/></div>
+      </div>
+    
+        <script>
+            $('#zoom_01').elevateZoom({
+            zoomType: "inner",
+        cursor: "crosshair",
+        zoomWindowFadeIn: 500,
+        zoomWindowFadeOut: 750
+           }); 
+        </script>
+
+
+
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   </body>
