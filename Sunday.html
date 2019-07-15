@@ -15,7 +15,7 @@
     <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link
-      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      href="http://fonts.googleapis.com/css?family=Raleway:400,300,600"
       rel="stylesheet"
       type="text/css"
     />
@@ -29,17 +29,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
-    <script>
-      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    </script>
+    <script src="js/index.js"></script>
   </head>
   <body>
     <!-- Primary Page Layout
@@ -47,14 +37,16 @@
 
     <div class="topnav" id="myTopnav">
       <img class="logo" src="images/BJSS-280x150.png" width="90" height="50" />
+      <div class="btn btn-nav" id="btn-nav" onclick="navToggle()">
+        <div class="btn-nav-middle"></div>
+      </div>
+    </div>
+    <div id="navList">
       <ul>
-        <a href="index.html">Home Page</a>
-        <a href="MapOfVenue.html">Map of Venue</a>
-        <a href="Saturday.html">Saturday</a>
-        <a href="Sunday.html">Sunday</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="MapOfVenue.html">Map of Venue</a></li>
+        <li><a href="Saturday.html">Saturday</a></li>
+        <li><a href="Sunday.html">Sunday</a></li>
       </ul>
     </div>
 
@@ -110,12 +102,6 @@
           <td class="tg-s268">Reception</td>
         </tr>
         <tr>
-          <td class="tg-s268">5pm – 6pm</td>
-          <td class="tg-s268">BJSS staff meeting</td>
-          <td class="tg-s268">All staff</td>
-          <td class="tg-s268">Carden Suite</td>
-        </tr>
-        <tr>
           <td class="tg-s268">12pm – 2pm</td>
           <td class="tg-s268">Sunday lunch</td>
           <td class="tg-s268">available</td>
@@ -126,36 +112,6 @@
           <td class="tg-s268">Guests to depart at own leisure</td>
           <td class="tg-s268">All</td>
           <td class="tg-s268"></td>
-        </tr>
-        <tr>
-          <td class="tg-s268">7pm – 7:45pm</td>
-          <td class="tg-s268">Pre-dinner drinks</td>
-          <td class="tg-s268">All</td>
-          <td class="tg-s268">Bar - Carden Suite</td>
-        </tr>
-        <tr>
-          <td class="tg-s268">7:45pm - 1am</td>
-          <td class="tg-s268">Dinner &amp; entertainment</td>
-          <td class="tg-s268">All</td>
-          <td class="tg-s268">Carden Suite</td>
-        </tr>
-        <tr>
-          <td class="tg-s268">8:30pm – 10:30pm</td>
-          <td class="tg-s268">Teens movie</td>
-          <td class="tg-s268">Teenagers (not supervised)</td>
-          <td class="tg-s268">Carriage Room</td>
-        </tr>
-        <tr>
-          <td class="tg-s268">11pm</td>
-          <td class="tg-s268">Cheese &amp; biscuits</td>
-          <td class="tg-s268">Optional</td>
-          <td class="tg-s268">Carden Suite</td>
-        </tr>
-        <tr>
-          <td class="tg-0lax">1am</td>
-          <td class="tg-0lax">Evening event finishes</td>
-          <td class="tg-0lax">All</td>
-          <td class="tg-0lax"></td>
         </tr>
       </table>
     </div>
