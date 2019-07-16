@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="scripts/jquery-1.8.3.min.js"></script>
-    <script src="scripts/jquery.elevatezoom.js"></script>
+
+      <script src='scripts/jquery-1.8.3.min.js'></script>
+      <script src='scripts/jquery.elevatezoom.js'></script>
 
     <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -50,34 +51,31 @@
         <li><a href="MapOfVenue.html">Venue map</a></li>
         <li><a href="Saturday.html">Saturday</a></li>
         <li><a href="Sunday.html">Sunday</a></li>
-        <li>
-          <a href="BabySitting(pre-booked).html">Baby sitting (pre-booked)</a>
-        </li>
-        <li><a href="FamilyGuidelines.html">Family guidelines</a></li>
-        <li><a href="LeisureFacilities.html">Leisure facilities</a></li>
-        <li><a href="Check-in&Check-out.html">Check-in & check-out</a></li>
       </ul>
     </div>
-    <h3 class="main" align="center"><b>Venue map</b></h3>
-
-    <div class="row">
-      <div align="center" class="twelve.columns">
-        <img
-          id="zoom_01"
-          src="images/map_small.png"
-          data-zoom-image="images/Map.png"
-        />
+    <div class="section main">
+      <div class="container">
+        <h3 class="section-heading">Venue map</h3>
+        <p class="section-description">
+         Zoom in on the map to exlore each location.
+        </p>
+        <div class="row">
+            <img class="u-max-full-width" id="zoom_01" src='images/map_small.png' data-zoom-image="images/Map.png"/>
+          </div>
+        </div>
       </div>
     </div>
-
-    <script>
-      $("#zoom_01").elevateZoom({
-        zoomType: "inner",
+    
+        <script>
+            $('#zoom_01').elevateZoom({
+            zoomType: "inner",
         cursor: "crosshair",
         zoomWindowFadeIn: 500,
         zoomWindowFadeOut: 750
-      });
-    </script>
+           }); 
+        </script>
+
+
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
