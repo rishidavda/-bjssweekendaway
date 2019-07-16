@@ -771,7 +771,7 @@ there.
 html {
   background: #ffffff; /* fallback color */
   background: linear-gradient(to bottom, #ffffff, #c7c7c7);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   width: 100%;
   min-height: 100%;
