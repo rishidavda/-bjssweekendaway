@@ -2,7 +2,7 @@
 
 /**
  * 1. Image slideshow
- * 2. Block quotes
+ * 2. Quotation
  */
 
 /* Image slideshow
@@ -131,7 +131,6 @@
   .footer{
     text-align: right;
     color: #0047bb;
-    font-size: 1em;
-    font-weight: 900;
+    font-weight: 800;
     font-style: italic;
   }

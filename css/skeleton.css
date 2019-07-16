@@ -18,6 +18,7 @@
 - Lists
 - Code
 - Tables
+- Sections
 - Spacing
 - Utilities
 - Clearing
@@ -518,6 +519,17 @@ th:last-child,
 td:last-child {
   padding-right: 0;
 }
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .section {
+    padding: 3rem 0 2rem;
+    text-align: center;
+  }
+  .section-heading,
+  .section-description {
+    margin-bottom: 1.2rem;
+  }
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
