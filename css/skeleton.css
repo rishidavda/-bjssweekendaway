@@ -653,8 +653,8 @@ there.
   align-items: center;
   background-color: #ededed;
   -webkit-box-shadow: 0 8px 6px -6px rgb(199, 199, 199);
-    -moz-box-shadow: 0 8px 6px -6px rgb(199, 199, 199);
-    box-shadow: 0 8px 6px -6px rgb(199, 199, 199);
+  -moz-box-shadow: 0 8px 6px -6px rgb(199, 199, 199);
+  box-shadow: 0 8px 6px -6px rgb(199, 199, 199);
 }
 
 /* Style the links inside the navigation bar */
@@ -770,7 +770,7 @@ there.
 }
 html {
   background: #ffffff; /* fallback color */
-  background: linear-gradient( to bottom, #ffffff, #c7c7c7);
+  background: linear-gradient(to bottom, #ffffff, #c7c7c7);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
