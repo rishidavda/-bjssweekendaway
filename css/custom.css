@@ -111,7 +111,7 @@
     /* -- inside the relative position of quote -- */
     line-height: 0;
     position: relative;
-    top: 25px;
+    top: 30px;
     color: #ccc;
     font-size: 5em;
 }
