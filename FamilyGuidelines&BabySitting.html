@@ -31,34 +31,12 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
-
-    <script src="js/index.js"></script>
   </head>
   <body>
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div class="topnav" id="myTopnav">
-      <img class="logo" src="images/BJSS-280x150.png" width="90" height="50" />
-      <div class="btn btn-nav" id="btn-nav" onclick="navToggle()">
-        <div class="btn-nav-middle"></div>
-      </div>
-    </div>
-    <div id="navList">
-      <ul>
-        <li><a href="index.html">Home </a></li>
-        <li><a href="MapOfVenue.html">Venue map</a></li>
-        <li><a href="Saturday.html">Saturday</a></li>
-        <li><a href="Sunday.html">Sunday</a></li>
-        <li>
-          <a href="FamilyGuidelines&BabySitting.html"
-            >Family guidelines & Baby sitting</a
-          >
-        </li>
-        <li><a href="LeisureFacilities.html">Leisure facilities</a></li>
-        <li><a href="Check-in&Check-out.html">Check-in & check-out</a></li>
-      </ul>
-    </div>
+    <div id="header"></div>
     <h3 class="main" align="center"><b>Family guidelines & Baby sitting</b></h3>
     <div align="center">
       <h5><b>Pre-booked babysitting service 7pm-1am</b></h5>
@@ -101,5 +79,10 @@
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/index.js"></script>
+    <script>
+      addHeader();
+      addNavList();
+    </script>
   </body>
 </html>
