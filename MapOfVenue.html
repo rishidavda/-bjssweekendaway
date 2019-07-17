@@ -28,36 +28,41 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    
-    <style>
-        /* * {box-sizing: border-box;} */
-        
-        .img-zoom-container {
-          position: relative;
-        }
-        
-        .img-zoom-lens {
-          position: absolute;
-          border: 0px solid #d4d4d4;
-          /*set the size of the lens:*/
-          width: 100px;
-          height: 100px;
-        }
-        
-        .img-zoom-result {
-          border: 1px solid #d4d4d4;
-          /*set the size of the result div:*/
-          width: 500px;
-          height: 340px;
-        }
+  <div id="header"></div>
+    <div class="section main">
+      <div class="container">
+        <h3 class="section-heading">Venue map</h3>
+        <p class="section-description">
+         Zoom in on the map to explore facilities at Carden Park Hotel.
+        </p>
+            <div class="img-zoom-container">
+                <div class ="u-max-full-width">
+                    <div id="myResult" class="img-zoom-result"></div>
+                <img id="myImage" src="images/Map.png">   
+              </div></div>
+          </div>
+  
+  <div class="section">
+      <div class="container">
+        <p>
+        For any questions over the course of the weekend, please contact <b>Tanya Gabbitas</b> on:
+        <a href="tel:07393381473">07393381473</a>
+        </p>
+      </p>Enjoy your stay!</p>
+      </div>
+    </div>
 
-        </style>
-        <script>
+    <script>
         function imageZoom(imgID, resultID) {
           var img, lens, result, cx, cy;
           img = document.getElementById(imgID);
@@ -114,41 +119,12 @@
           }
         }
         </script>
-  </head>
-  <body>
-    <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <div id="header"></div>
-    <div class="section main">
-      <div class="container">
-        <h3 class="section-heading">Venue map</h3>
-        <p class="section-description">
-         Zoom in on the map to explore facilities at Carden Park Hotel.
-        </p>
-        <div class="row">
-            <div class="img-zoom-container">
-                <div class ="u-max-full-width">
-                    <div id="myResult" class="img-zoom-result"></div>
-                <img id="myImage" src="images/Map.png">
-                
-              </div></div>
-          </div>
-        </div>
-      </div>
-    </div>
+<script>
+    // Initiate zoom effect:
+ imageZoom("myImage", "myResult");
+ </script>
 
-    <div class="section">
-        <div clas="container">
-          <a href="https://twitter.com/search?q=bjssnotts">
-            <img
-              src="images/twitterIcon.png"
-              width="50"
-              height="40"
-              title="#bjssnotts"/>
-        </a>
-       </div>
-      </div>
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -157,8 +133,6 @@
   <script>
     addHeader();
     addNavList();
-    // Initiate zoom effect:
-    imageZoom("myImage", "myResult");
     </script>
   </body>
 </html>

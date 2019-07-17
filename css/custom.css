@@ -3,6 +3,7 @@
 /**
  * 1. Image slideshow
  * 2. Quotation
+ * 3. Image zoom
  */
 
 /* Image slideshow
@@ -54,7 +55,7 @@
   }
 
   .active {
-    background-color: #717171;
+    background-color: #0047bb;
   }
 
   /* Fading animation */
@@ -133,4 +134,27 @@
     color: #0047bb;
     font-weight: 800;
     font-style: italic;
+  }
+
+  /* Image zoom
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /* * {box-sizing: border-box;} */
+  
+  .img-zoom-container {
+    position: relative;
+  }
+  
+  .img-zoom-lens {
+    position: absolute;
+    border: 0px solid #d4d4d4;
+    /*set the size of the lens:*/
+    width: 50px;
+    height: 50px;
+  }
+  
+  .img-zoom-result {
+    border: 1px solid #d4d4d4;
+    /*set the size of the result div:*/
+    /* width: 500px;
+    height: 340px; */
   }
