@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <script src='scripts/jquery-1.8.3.min.js'></script>
+      <script src='scripts/jquery.elevatezoom.js'></script>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Nottingham Strategy Weekend Away 2019</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <script src="js/index.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+        
+        .img-zoom-container {
+          position: relative;
+        }
+        
+        .img-zoom-lens {
+          position: absolute;
+          border: 0px solid #d4d4d4;
+          /*set the size of the lens:*/
+          width: 100px;
+          height: 100px;
+        }
+        
+        .img-zoom-result {
+          border: 1px solid #d4d4d4;
+          /*set the size of the result div:*/
+          width: 500px;
+          height: 340px;
+        }
+        </style>
+        <script>
+        function imageZoom(imgID, resultID) {
+          var img, lens, result, cx, cy;
+          img = document.getElementById(imgID);
+          result = document.getElementById(resultID);
+          /*create lens:*/
+          lens = document.createElement("DIV");
+          lens.setAttribute("class", "img-zoom-lens");
+          /*insert lens:*/
+          img.parentElement.insertBefore(lens, img);
+          /*calculate the ratio between result DIV and lens:*/
+          cx = result.offsetWidth / lens.offsetWidth;
+          cy = result.offsetHeight / lens.offsetHeight;
+          /*set background properties for the result DIV:*/
+          result.style.backgroundImage = "url('" + img.src + "')";
+          result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+          /*execute a function when someone moves the cursor over the image, or the lens:*/
+          lens.addEventListener("mousemove", moveLens);
+          img.addEventListener("mousemove", moveLens);
+          /*and also for touch screens:*/
+          lens.addEventListener("touchmove", moveLens);
+          img.addEventListener("touchmove", moveLens);
+          function moveLens(e) {
+            var pos, x, y;
+            /*prevent any other actions that may occur when moving over the image:*/
+            e.preventDefault();
+            /*get the cursor's x and y positions:*/
+            pos = getCursorPos(e);
+            /*calculate the position of the lens:*/
+            x = pos.x - (lens.offsetWidth / 2);
+            y = pos.y - (lens.offsetHeight / 2);
+            /*prevent the lens from being positioned outside the image:*/
+            if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+            if (x < 0) {x = 0;}
+            if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+            if (y < 0) {y = 0;}
+            /*set the position of the lens:*/
+            lens.style.left = x + "px";
+            lens.style.top = y + "px";
+            /*display what the lens "sees":*/
+            result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+          }
+          function getCursorPos(e) {
+            var a, x = 0, y = 0;
+            e = e || window.event;
+            /*get the x and y positions of the image:*/
+            a = img.getBoundingClientRect();
+            /*calculate the cursor's x and y coordinates, relative to the image:*/
+            x = e.pageX - a.left;
+            y = e.pageY - a.top;
+            /*consider any page scrolling:*/
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return {x : x, y : y};
+          }
+        }
+        </script>
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="topnav" id="myTopnav">
+      <img class="logo" src="images/BJSS-280x150.png" width="90" height="50" />
+      <div class="btn btn-nav" id="btn-nav" onclick="navToggle()">
+        <div class="btn-nav-middle"></div>
+      </div>
+    </div>
+    <div id="navList">
+        <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="MapOfVenue.html">Venue map</a></li>
+            <li><a href="Saturday.html">Saturday</a></li>
+            <li><a href="Sunday.html">Sunday</a></li>
+            <li><a href="FamilyGuidelines.html">Family guidelines & Baby sitting</a></li>
+            <li><a href="LeisureFacilities.html">Leisure facilities</a></li>
+            <li><a href="Check-in&Check-out.html">Check-in & check-out</a></li>
+        </ul>
+    </div>
+    <div class="section main" align="center">
+      <div class="container">
+        <h3 class="section-heading">Venue map</h3>
+        <p class="section-description">
+         Zoom in on the map to explore each location.
+        </p>
+        <div class="twelve columns">
+            <div class="img-zoom-container">
+                <div class ="u-max-full-width">
+                    <div id="myresult" class="img-zoom-result"></div>
+                <img id="myimage" src="images/Map.png" width="500" height="340">
+                
+              </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+        // Initiate zoom effect:
+        imageZoom("myimage", "myresult");
+        </script>
+
+    <div class="twelve columns" align="center">
+        <p><br/><a href="https://twitter.com/search?q=bjssnotts"><img src="images/twitterIcon.png" width="50" height="40" title="#bjssnotts"></a></p></div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>
