@@ -228,7 +228,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   font-weight: 300;
 }
@@ -778,7 +778,7 @@ there.
 }
 
 .main {
-  padding: 15px;
+  padding: 25px;
 }
 html {
   background: #ffffff; /* fallback color */
