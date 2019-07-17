@@ -45,12 +45,11 @@ function addNavList() {
   // add new links here
   const navLinks = [
     { text: "Home", link: "index.html" },
+    { text: "Useful information for your stay", link: "UsefulInformation.html" },
     { text: "Venue map", link: "MapOfVenue.html" },
     { text: "Saturday", link: "Saturday.html" },
     { text: "Sunday", link: "Sunday.html" },
     { text: "Family guidelines & baby sitting", link: "FamilyGuidelines&BabySitting.html" },
-    { text: "Leisure facilities", link: "LeisureFacilities.html" },
-    { text: "Check-in & check-out", link: "Check-in&Check-out.html" },
     { text: "Contact", link: "Contact.html" }
   ];
   const headerContainer = document.getElementById("header");

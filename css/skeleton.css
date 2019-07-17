@@ -532,6 +532,10 @@ td:last-child {
     margin-bottom: 1.2rem;
 }
 
+.section-description {
+  font-size:17px;
+}
+
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
