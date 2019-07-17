@@ -35,7 +35,7 @@
 
     <script src="js/index.js"></script>
     <style>
-        * {box-sizing: border-box;}
+        /* * {box-sizing: border-box;} */
         
         .img-zoom-container {
           position: relative;
@@ -55,6 +55,7 @@
           width: 500px;
           height: 340px;
         }
+
         </style>
         <script>
         function imageZoom(imgID, resultID) {
@@ -144,8 +145,8 @@
         <div class="twelve columns">
             <div class="img-zoom-container">
                 <div class ="u-max-full-width">
-                    <div id="myresult" class="img-zoom-result"></div>
-                <img id="myimage" src="images/Map.png" width="500" height="340">
+                    <div id="myResult" class="img-zoom-result"></div>
+                <img id="myImage" src="images/Map.png">
                 
               </div></div>
           </div>
@@ -155,7 +156,7 @@
     
     <script>
         // Initiate zoom effect:
-        imageZoom("myimage", "myresult");
+        imageZoom("myImage", "myResult");
         </script>
 
     <div class="twelve columns" align="center">
