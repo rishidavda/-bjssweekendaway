@@ -570,6 +570,11 @@ form {
   box-sizing: border-box;
 }
 
+.u-custom-full-width {
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
 .u-pull-right {
   float: right;
 }
