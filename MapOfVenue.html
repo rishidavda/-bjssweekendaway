@@ -28,35 +28,12 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png" />
 
-    
-    <style>
-        /* * {box-sizing: border-box;} */
-        
-        .img-zoom-container {
-          position: relative;
-        }
-        
-        .img-zoom-lens {
-          position: absolute;
-          border: 0px solid #d4d4d4;
-          /*set the size of the lens:*/
-          width: 50px;
-          height: 50px;
-        }
-        
-        .img-zoom-result {
-          border: 1px solid #d4d4d4;
-          /*set the size of the result div:*/
-          /* width: 500px;
-          height: 340px; */
-        }
-
-        </style>
         <script>
         function imageZoom(imgID, resultID) {
           var img, lens, result, cx, cy;
@@ -120,13 +97,16 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <div id="header"></div>
-    <div class="section main" align="center">
+
+    <div class="section main">
       <div class="container">
         <h3 class="section-heading">Venue map</h3>
         <p class="section-description">
-         Scroll on the map below to see a zoomed in viewpoint and explore each location. </br><a href="/images/CardenPark_Map.pdf">Click here to download the map</a>
+         Scroll on the map below to explore facilities available at Caden Park Hotel. <br />
+          <a href="/images/CardenPark_Map.pdf">Click here to download the map</a>
         </p>
-        <div class="twelve columns">
+
+        <div class="row">
             <div class="img-zoom-container">
                 <div class ="u-max-full-width">
                     <div id="myResult" class="img-zoom-result"></div>
@@ -143,17 +123,29 @@
     imageZoom("myImage", "myResult");
     </script>
   
-  <div class="section">
+  <div class="section footer">
       <div class="container">
-        <p>
-        For any questions over the course of the weekend, please contact <b>Tanya Gabbitas</b> on:
+        <div class="row">
+        For any questions over the course of the weekend, please contact <b>Tanya Gabbitas</b> on
         <a href="tel:07393381473">07393381473</a>
         </p>
-      </p>Enjoy your stay!</p>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <p>Check out twitter <b>#bjssnotts</b>
+          </p>
+        </div>
+        <div class="one-half comumn">
+      <a href="https://twitter.com/search?q=bjssnotts">
+        <img class="twitter-image"
+          src="images/twitterIcon.png"
+          title="#bjssnotts"/>
+    </a>
+    </div>
+    </div>
+    <p class="strong">Enjoy your stay!</p>
       </div>
     </div>
-    <div class="twelve columns" align="center">
-        <p><br/><a href="https://twitter.com/search?q=bjssnotts"><img src="images/twitterIcon.png" width="50" height="40" title="#bjssnotts"></a></p></div>
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

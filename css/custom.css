@@ -4,6 +4,8 @@
  * 1. Image slideshow
  * 2. Quotation
  * 3. Image zoom
+ * 4. Footer
+ * 5. Twitter image
  */
 
 /* Image slideshow
@@ -94,7 +96,7 @@
 /* Qoutation
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .quotation,
-.footer {
+.author {
     background: #f9f9f9;
     border-left: 10px solid #ccc;
     margin: 0 auto;
@@ -129,7 +131,7 @@
     margin: 10px;
   }
 
-  .footer{
+  .author{
     text-align: right;
     color: #0047bb;
     font-weight: 800;
@@ -158,3 +160,28 @@
     /* width: 500px;
     height: 340px; */
   }
+
+  /* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+  .footer {
+    background-color: #0047bb;
+    color: white;
+  }
+
+  .footer a {
+    color: white;
+    font-weight: bold;
+  }
+
+  .footer .strong {
+    font-size: 1.5em;
+  }
+
+  
+  /* Twitter image 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.twitter-image {
+  width:40px;
+  height:30px;
+}
