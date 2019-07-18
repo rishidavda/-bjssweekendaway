@@ -5,7 +5,6 @@
  * 2. Quotation
  * 3. Image zoom
  * 4. Footer
- * 5. Twitter image
  */
 
 /* Image slideshow
@@ -15,11 +14,7 @@
   }
   .mySlides-img {
     vertical-align: middle;
-<<<<<<< HEAD
-    width: 90%;
-=======
     width: 80%;
->>>>>>> d3bc3cf1d52ca8c15958ea8345279a1165bd23fd
   }
 
   /* Slideshow container */
