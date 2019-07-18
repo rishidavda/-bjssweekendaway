@@ -5,7 +5,6 @@
  * 2. Quotation
  * 3. Image zoom
  * 4. Footer
- * 5. Twitter image
  */
 
 /* Image slideshow
@@ -15,7 +14,7 @@
   }
   .mySlides-img {
     vertical-align: middle;
-    width: 50%;
+    width: 80%;
   }
 
   /* Slideshow container */
@@ -177,11 +176,3 @@
   .footer .strong {
     font-size: 1.5em;
   }
-
-  
-  /* Twitter image 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.twitter-image {
-  width:40px;
-  height:30px;
-}
