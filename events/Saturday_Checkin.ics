@@ -27,8 +27,8 @@ DTSTAMP:20190716T142846Z
 UID:20190716T142846Z-211011340@marudot.com
 DTSTART;TZID=Europe/London:20190720T120000
 DTEND;TZID=Europe/London:20190720T170000
-SUMMARY:Check-in
-DESCRIPTION:Check-in\, bags to be left at reception & collected later
+SUMMARY:Arrival
+DESCRIPTION:Check-in\, bags to be left at reception & collected later. Check in as at 3pm.
 LOCATION:Reception
 END:VEVENT
 END:VCALENDAR
